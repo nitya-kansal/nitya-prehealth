@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --bg: #f7f9fc;
+  --navy: #0b1f3a;
+  --blue: #2f6fed;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, #0b1f3a 0%, #142a4d 100%);
+  color: white;
+  padding: 40px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+/* SECTION */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  margin: 10px;
+  border-radius: 30px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: var(--navy);
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+/* TIMELINE */
+.timeline {
+  border-left: 3px solid var(--blue);
+  padding-left: 20px;
+}
+
+.timeline div {
+  margin-bottom: 20px;
+}
