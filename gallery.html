@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Awards &amp; Honors — Nitya Kansal</title>
-  <meta name="description" content="Academic, leadership, and advocacy awards and honors.">
+  <title>Gallery &amp; Recognition — Nitya Kansal</title>
+  <meta name="description" content="Photos from book drives, award ceremonies, certificates, and newsletter features — organized by event.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -33,45 +33,31 @@
   <main id="main">
     <div class="page-head">
       <div class="container">
-        <p class="eyebrow">Awards &amp; Honors</p>
-        <h1>Recognition</h1>
-        <p>Academic, leadership, and advocacy honors received to date.</p>
+        <p class="eyebrow">Gallery &amp; Recognition</p>
+        <h1>Moments &amp; milestones</h1>
+        <p>Photos from book drives, award ceremonies, certificates, and press — grouped by event. Pick a category or open an event to see all its photos.</p>
+        <!-- EDIT: paste the Bookish Beginnings Instagram URL below (replace YOUR_HANDLE). -->
+        <p style="margin-top:20px"><a class="btn btn--outline" href="https://www.instagram.com/YOUR_HANDLE" target="_blank" rel="noopener">Bookish Beginnings on Instagram ↗</a></p>
       </div>
     </div>
 
     <section class="section">
+      <div class="container">
+        <!-- The gallery builds itself here from gallery-data.js — no HTML to edit.
+             To add/organize photos, edit gallery-data.js only. -->
+        <div id="gallery-root"></div>
+      </div>
+    </section>
+
+    <!-- Optional: pull quotes from letters/recognition (see privacy note in gallery-data.js) -->
+    <section class="section">
       <div class="container narrow">
-        <ul class="record-list">
-          <li class="record">
-            <div>
-              <div class="record__title">National Merit Finalist</div>
-              <div class="record__desc">National recognition for academic excellence.</div>
-            </div>
-            <div class="record__year">2024</div>
-          </li>
-          <li class="record">
-            <div>
-              <div class="record__title">Purple Comet Math Competition — 1st Place (Team Lead)</div>
-              <div class="record__desc">Led team to first place, Massachusetts.</div>
-            </div>
-            <div class="record__year">—</div>
-          </li>
-          <li class="record">
-            <div>
-              <div class="record__title">Women Icon Award</div>
-              <div class="record__desc">Recognized for leadership and advocacy.</div>
-            </div>
-            <div class="record__year">2025</div>
-          </li>
-          <li class="record">
-            <div>
-              <div class="record__title">Voice of Youth Award</div>
-              <div class="record__desc">Honored for community advocacy and youth impact.</div>
-            </div>
-            <div class="record__year">—</div>
-          </li>
-          <!-- ADD: copy a <li class="record"> block for each new award -->
-        </ul>
+        <div class="section-head"><h2>In their words</h2></div>
+        <div class="panel">
+          <blockquote style="border-left:3px solid var(--accent); margin:0; padding:4px 0 4px 18px; color:var(--ink); font-style:italic;">
+            "Add a short quote from a letter or recognition here." <span class="muted" style="font-style:normal">— Source, Year</span>
+          </blockquote>
+        </div>
       </div>
     </section>
   </main>
@@ -82,7 +68,6 @@
       <nav class="site-footer__links" aria-label="Footer">
         <a href="gallery.html">Gallery</a>
         <a href="cv.html">CV</a>
-        <a href="timeline.html">Timeline</a>
         <a href="contact.html">Contact</a>
         <a href="mailto:nitya.kansal2020@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/nitya-kansal" target="_blank" rel="me noopener">LinkedIn</a>
@@ -91,6 +76,9 @@
     </div>
   </footer>
 
+  <!-- Load the data first, then the renderer, then shared site script -->
+  <script src="gallery-data.js"></script>
+  <script src="gallery.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

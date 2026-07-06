@@ -1,31 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>About</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Nitya Kansal</title>
+  <meta name="description" content="About Nitya Kansal — Sociology student at the University of Washington focused on health equity and access to care.">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<nav>
-  <a href="index.html">Home</a>
-</nav>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="nav__brand" href="index.html">Nitya Kansal</a>
+      <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="impact.html">Service</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-<section>
-  <h2>About Me</h2>
+  <main id="main">
+    <div class="page-head">
+      <div class="container">
+        <p class="eyebrow">About</p>
+        <h1>Getting to know me</h1>
+        <p>Where I come from, what drives me, and where I'm headed.</p>
+      </div>
+    </div>
 
-  <p>
-    I am a Sociology student at the University of Washington Seattle exploring how social systems shape access to education and health.
-  </p>
+    <section class="section">
+      <div class="container narrow prose">
+        <p>I'm a Sociology student at the University of Washington, Seattle, exploring how social systems shape access to education and health.</p>
+        <p>My work centers on underserved communities, literacy access, and health equity — the throughline connecting my volunteering, leadership, and academic interests. I've seen how much of a person's health is decided long before they reach a clinic, and I want to practice medicine that takes those realities seriously.</p>
+        <p>I remain open to specialization and am focused, for now, on building a systems-level understanding of healthcare: why access is uneven, how communities are affected, and where a physician can meaningfully intervene.</p>
+      </div>
+    </section>
 
-  <p>
-    My focus is on underserved communities, literacy access, and health equity through a future career in medicine.
-  </p>
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-head">
+          <h2>At a glance</h2>
+        </div>
+        <dl class="factlist">
+          <div><dt>University</dt><dd>University of Washington, Seattle</dd></div>
+          <div><dt>Major</dt><dd>Sociology</dd></div>
+          <div><dt>Focus areas</dt><dd>Health equity · Literacy access · Underserved communities</dd></div>
+          <div><dt>Career goal</dt><dd>Physician (specialization open)</dd></div>
+          <div><dt>Certifications</dt><dd>CPR · Stop the Bleed · NAC (in progress)</dd></div>
+        </dl>
+      </div>
+    </section>
 
-  <p>
-    I remain open to specialization and am focused on building a systems-level understanding of healthcare.
-  </p>
-</section>
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-head">
+          <h2>My journey</h2>
+          <p>A few milestones along the way.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__date">2023</div>
+            <div class="timeline__body">Recognized for a 500-book donation supporting literacy access.</div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__date">2024</div>
+            <div class="timeline__body">Named a National Merit Finalist.</div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__date">2025</div>
+            <div class="timeline__body">Earned leadership and advocacy awards for community work.</div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__date">2026</div>
+            <div class="timeline__body">Began studies at the University of Washington, Seattle.</div>
+          </div>
+        </div>
+        <p style="margin-top:24px"><a href="timeline.html">See the full timeline →</a></p>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>© <span id="year">2026</span> Nitya Kansal</div>
+      <nav class="site-footer__links" aria-label="Footer">
+        <a href="gallery.html">Gallery</a>
+        <a href="cv.html">CV</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:nitya.kansal2020@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/nitya-kansal" target="_blank" rel="me noopener">LinkedIn</a>
+        <a href="https://github.com/nitya-kansal" target="_blank" rel="me noopener">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,52 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitya Kansal — Pre-Med Portfolio</title>
+  <meta name="description" content="Sociology student at the University of Washington and aspiring physician focused on health equity, literacy access, and underserved communities.">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<div class="hero">
-  <h1>Your Full Name</h1>
-  <p>Sociology • University of Washington Seattle</p>
-  <p>Future Physician-in-Training | Health Equity Focus</p>
-
-  <div>
-    <a class="btn" href="about.html">View Journey</a>
-    <a class="btn" href="impact.html">Explore Impact</a>
-  </div>
-</div>
-
-<nav>
-  <a href="about.html">About</a>
-  <a href="experience.html">Experience</a>
-  <a href="impact.html">Impact</a>
-  <a href="awards.html">Awards</a>
-  <a href="timeline.html">Timeline</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<section>
-  <h2>Featured Achievements</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>🏆 National Merit Finalist</h3>
-      <p>Recognized for academic excellence at national level.</p>
+  <!-- ===== Header (identical on every page) ===== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="nav__brand" href="index.html">Nitya Kansal</a>
+      <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="impact.html">Service</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
+  </header>
 
-    <div class="card">
-      <h3>📊 STEM Leadership</h3>
-      <p>Led team to 1st place in Purple Comet Math Competition (MA).</p>
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="eyebrow">Aspiring Physician · Health Equity</p>
+        <h1>Nitya Kansal</h1>
+        <p class="hero__tagline">Sociology student at the University of Washington, Seattle</p>
+        <p class="hero__sub">Studying how social systems shape access to education and health — and preparing for a career in medicine that narrows those gaps.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="about.html">Read my story</a>
+          <a class="btn btn--ghost" href="cv.html">View CV</a>
+        </div>
+
+        <div class="stats">
+          <div>
+            <div class="stat__num">4+ yrs</div>
+            <div class="stat__label">Community engagement</div>
+          </div>
+          <div>
+            <div class="stat__num">500+</div>
+            <div class="stat__label">Books donated</div>
+          </div>
+          <div>
+            <div class="stat__num">National</div>
+            <div class="stat__label">Merit Finalist</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Highlights</p>
+          <h2>What I've been working toward</h2>
+          <p>A snapshot of the academic recognition, leadership, and service that shape my path to medicine.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card card--accent">
+            <span class="card__icon" aria-hidden="true">🎓</span>
+            <h3>National Merit Finalist</h3>
+            <p>Recognized for academic excellence at the national level.</p>
+          </article>
+          <article class="card card--accent">
+            <span class="card__icon" aria-hidden="true">📚</span>
+            <h3>Bookish Beginnings</h3>
+            <p>Founded a literacy initiative delivering 500+ books to underserved communities.</p>
+          </article>
+          <article class="card card--accent">
+            <span class="card__icon" aria-hidden="true">🩺</span>
+            <h3>Clinical Preparation</h3>
+            <p>CPR certified, Stop the Bleed trained, and pursuing NAC certification.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Direction / focus ===== -->
+    <section class="section">
+      <div class="container narrow center">
+        <p class="eyebrow">Focus</p>
+        <h2>Medicine through the lens of equity</h2>
+        <p class="lead muted">My sociology background gives me a systems-level view of healthcare: why access is uneven, how communities are affected, and where a future physician can make the difference. Explore my <a href="experience.html">experience</a>, <a href="research.html">research interests</a>, and <a href="impact.html">service work</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer (identical on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>© <span id="year">2026</span> Nitya Kansal</div>
+      <nav class="site-footer__links" aria-label="Footer">
+        <a href="gallery.html">Gallery</a>
+        <a href="cv.html">CV</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:nitya.kansal2020@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/nitya-kansal" target="_blank" rel="me noopener">LinkedIn</a>
+        <a href="https://github.com/nitya-kansal" target="_blank" rel="me noopener">GitHub</a>
+      </nav>
     </div>
+  </footer>
 
-    <div class="card">
-      <h3>📚 Literacy Impact</h3>
-      <p>500+ books donated to underserved communities.</p>
-    </div>
-  </div>
-</section>
-
+  <script src="script.js"></script>
 </body>
 </html>
