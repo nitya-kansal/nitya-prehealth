@@ -10,8 +10,15 @@ free on GitHub Pages.
 
 Name, email (nitya.kansal2020@gmail.com), LinkedIn, and GitHub links are wired
 in across every page. The only thing left is your **CV PDF** (below), plus an
-**Instagram** link when you're ready — a ready-to-uncomment row is waiting in
-`contact.html`.
+**Instagram** link when you're ready.
+
+### One file for facts shown in many places → `assets/js/site-data.js`
+Anything that appears on more than one page — books donated, the org name, your
+Instagram/email/LinkedIn/GitHub links, and the **awards list** — lives in
+**`assets/js/site-data.js`**. Edit a value there once and it updates everywhere
+automatically (no HTML editing). For example, change `booksDonated` or add an
+award to the `awards` list and it updates the Home, About, Service, Awards, and
+CV pages at once.
 
 ### Add your CV PDF
 1. The `assets/` folder already exists next to the HTML files.
@@ -19,21 +26,20 @@ in across every page. The only thing left is your **CV PDF** (below), plus an
 3. That's the path the CV page's "Download PDF" button already points to.
 
 ### Fill in the Instagram handle
-Three files link to the Bookish Beginnings Instagram with a `YOUR_HANDLE`
-placeholder: `gallery.html`, `impact.html`, and `contact.html`. Find-and-replace
-`YOUR_HANDLE` with the real handle in one step.
+Open `assets/js/site-data.js` and set `instagramUrl` to your real Instagram URL.
+That single value feeds the Gallery, Service, and Contact pages.
 
 ### Add photos to the Gallery
 The gallery holds hundreds of photos across events and categories (Bookish
-Beginnings, Awards, Certificates, In the News). It's **data-driven**: you edit
-**one file, `gallery-data.js`** — no HTML. The page shows one cover per event;
-visitors click an event to see all its photos, and click a photo to view it
-fullscreen with next/previous arrows.
+Beginning, Awards, Certificates, In the News). It's **data-driven**: you edit
+**one file, `assets/js/gallery-data.js`** — no HTML. The page shows one cover per
+event; visitors click an event to see all its photos, and click a photo to view
+it fullscreen with next/previous arrows.
 
 **To add an event:**
 1. Create a folder for it under `assets/images/`, e.g. `assets/images/book-2024-fall/`,
    and drop the photos in.
-2. Open `gallery-data.js`, copy an existing album `{ ... }` block, and set the
+2. Open `assets/js/gallery-data.js`, copy an existing album `{ ... }` block, and set the
    `title`, `date`, `cover`, and the `photos` list. (For a newsletter feature,
    add a `link:` with the public URL.)
 3. Save. That's it — the gallery rebuilds itself.
@@ -41,6 +47,7 @@ fullscreen with next/previous arrows.
 **Recommended folder layout**
 ```
 assets/images/
+  portrait/           Nitya.jpg          (the About-page photo)
   book-2023-spring/   cover.jpg  2.jpg  3.jpg ...
   award-women-icon/   cover.jpg ...
   certificates/       cpr.jpg  stop-the-bleed.jpg ...
@@ -67,7 +74,7 @@ assets/images/
 
 ```
 index.html        Home (hero + highlights)
-about.html        About + short journey timeline
+about.html        About + short journey timeline + portrait
 experience.html   Clinical prep + community/leadership experience
 research.html     Research interests, projects, publications, presentations
 impact.html       Service & leadership (labeled "Service" in the nav)
@@ -75,13 +82,23 @@ awards.html       Awards & honors
 cv.html           Curriculum vitae + PDF download
 timeline.html     Full timeline
 contact.html      Contact details
-styles.css        All styling (design system lives here)
-script.js         Mobile menu, active nav link, footer year
+
+assets/css/styles.css       All styling (design system lives here)
+assets/js/
+  site-data.js    ← EDIT ME: facts shown in many places (books, awards, links)
+  site.js         Fills those facts into every page
+  script.js       Mobile menu, active nav link, footer year
+  gallery-data.js ← EDIT ME: gallery photos/events
+  gallery.js      Builds the gallery from gallery-data.js
+  service-data.js ← EDIT ME: Service-page entries + category tabs
+  service.js      Builds the Service page from service-data.js
+assets/images/    Photos, grouped in a folder per event (+ portrait/)
 ```
 
 Every page shares the **same header and footer** block. The look of the whole
-site is controlled by the tokens at the top of `styles.css` (`:root { ... }`) —
-change a color or font once there and it updates everywhere.
+site is controlled by the tokens at the top of `assets/css/styles.css`
+(`:root { ... }`) — change a color or font once there and it updates everywhere.
+The files marked **EDIT ME** are the only ones you normally touch for content.
 
 ---
 
@@ -89,14 +106,19 @@ change a color or font once there and it updates everywhere.
 
 You don't need to know CSS. Copy an existing block and edit the text.
 
-**Add an award** — in `awards.html`, copy one `<li class="record">…</li>` block
-and change the title, description, and year.
+**Add an award** — in `assets/js/site-data.js`, copy a line in the `awards` list
+and set its `title`, `year`, and `desc`. It appears on the Awards page, the CV
+page, and the Service page's "Honors" tab automatically.
 
 **Add a project or publication** — in `research.html`, copy a `<article class="card">`
 (for projects) or an `<li class="record">` (for publications) and edit it.
 
-**Add an experience or service item** — in `experience.html` / `impact.html`,
-copy a `<article class="card">…</article>` block.
+**Add a service item** — in `assets/js/service-data.js`, copy an item `{ … }`
+block and set its text and `cats` (one or more category ids). List several ids to
+show the same entry under several tabs — no need to duplicate it.
+
+**Add an experience item** — in `experience.html`, copy a
+`<article class="card">…</article>` block.
 
 **Add a timeline milestone** — in `timeline.html`, copy a
 `<div class="timeline__item">…</div>` block (newest goes at the bottom).
@@ -152,7 +174,7 @@ redeploys automatically.
 
 ## 7. Design notes (for when you want to tweak the look)
 
-- **Colors & fonts:** all in `:root` at the top of `styles.css`. Change
+- **Colors & fonts:** all in `:root` at the top of `assets/css/styles.css`. Change
   `--accent` to reskin the accent color everywhere.
 - **Accessibility:** semantic HTML, a skip link, keyboard focus styles, and a
   `prefers-reduced-motion` guard are already in place. Keep image `alt` text and

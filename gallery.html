@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery &amp; Recognition — Nitya Kansal</title>
   <meta name="description" content="Photos from book drives, award ceremonies, certificates, and newsletter features — organized by event.">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -36,8 +36,7 @@
         <p class="eyebrow">Gallery &amp; Recognition</p>
         <h1>Moments &amp; milestones</h1>
         <p>Photos from book drives, award ceremonies, certificates, and press — grouped by event. Pick a category or open an event to see all its photos.</p>
-        <!-- EDIT: paste the Bookish Beginnings Instagram URL below (replace YOUR_HANDLE). -->
-        <p style="margin-top:20px"><a class="btn btn--outline" href="https://www.instagram.com/YOUR_HANDLE" target="_blank" rel="noopener">Bookish Beginnings on Instagram ↗</a></p>
+        <p style="margin-top:20px"><a class="btn btn--outline" data-site-href="instagramUrl" href="https://www.instagram.com/YOUR_HANDLE" target="_blank" rel="noopener"><span data-site="orgName">Bookish Beginning</span> on Instagram ↗</a></p>
       </div>
     </div>
 
@@ -69,16 +68,18 @@
         <a href="gallery.html">Gallery</a>
         <a href="cv.html">CV</a>
         <a href="contact.html">Contact</a>
-        <a href="mailto:nitya.kansal2020@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/nitya-kansal" target="_blank" rel="me noopener">LinkedIn</a>
-        <a href="https://github.com/nitya-kansal" target="_blank" rel="me noopener">GitHub</a>
+        <a data-site-href="email" href="mailto:nitya.kansal2020@gmail.com">Email</a>
+        <a data-site-href="linkedinUrl" href="https://www.linkedin.com/in/nitya-kansal" target="_blank" rel="me noopener">LinkedIn</a>
+        <a data-site-href="githubUrl" href="https://github.com/nitya-kansal" target="_blank" rel="me noopener">GitHub</a>
       </nav>
     </div>
   </footer>
 
-  <!-- Load the data first, then the renderer, then shared site script -->
-  <script src="gallery-data.js"></script>
-  <script src="gallery.js"></script>
-  <script src="script.js"></script>
+  <!-- Shared facts first, then the data, then the renderer, then site scripts -->
+  <script src="assets/js/site-data.js"></script>
+  <script src="assets/js/gallery-data.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Service &amp; Leadership — Nitya Kansal</title>
   <meta name="description" content="Leadership, volunteering, and community service focused on literacy and health equity.">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -41,46 +41,13 @@
 
     <section class="section">
       <div class="container">
-        <div class="grid grid--2">
-          <article class="card card--accent">
-            <p class="card__meta">Founder &amp; Lead · Literacy Initiative</p>
-            <h3>Bookish Beginnings</h3>
-            <p>A literacy initiative I founded to expand book access for underserved communities — organizing donations, distribution, and outreach.</p>
-            <div class="tags">
-              <span class="tag">Literacy access</span>
-              <span class="tag">Community outreach</span>
-              <span class="tag">Leadership</span>
-            </div>
-            <p style="margin-top:16px">
-              <a href="gallery.html">See photos &amp; recognition →</a>
-              <!-- EDIT: replace YOUR_HANDLE with the Bookish Beginnings Instagram handle -->
-              &nbsp;·&nbsp; <a href="https://www.instagram.com/YOUR_HANDLE" target="_blank" rel="noopener">Instagram ↗</a>
-            </p>
-          </article>
-          <article class="card card--accent">
-            <p class="card__meta">Recognized by Kentlake High School</p>
-            <h3>500+ books donated</h3>
-            <p>Recognized for contributing more than 500 books to communities with limited access to reading materials — a concrete measure of the initiative's reach.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Room to grow: add volunteering, mentoring, advocacy, etc. -->
-    <section class="section">
-      <div class="container">
         <div class="section-head">
-          <h2>Volunteering &amp; advocacy</h2>
-          <p>Additional service commitments will be documented here as they grow.</p>
+          <h2>Explore by category</h2>
+          <p>Pick one or more categories to filter — or leave it on “All” to see everything.</p>
         </div>
-        <div class="grid grid--3">
-          <!-- ADD: copy a card like this for each volunteering / advocacy role -->
-          <article class="card">
-            <p class="card__meta">Add a role</p>
-            <h3>Volunteering</h3>
-            <p>Hospital, clinic, or community volunteering can be listed here with dates and a short description.</p>
-          </article>
-        </div>
+        <!-- The tabs + cards build themselves here from service-data.js —
+             no HTML to edit. To add/organize entries, edit service-data.js only. -->
+        <div id="service-root"></div>
       </div>
     </section>
   </main>
@@ -93,13 +60,18 @@
         <a href="cv.html">CV</a>
         <a href="timeline.html">Timeline</a>
         <a href="contact.html">Contact</a>
-        <a href="mailto:nitya.kansal2020@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/nitya-kansal" target="_blank" rel="me noopener">LinkedIn</a>
-        <a href="https://github.com/nitya-kansal" target="_blank" rel="me noopener">GitHub</a>
+        <a data-site-href="email" href="mailto:nitya.kansal2020@gmail.com">Email</a>
+        <a data-site-href="linkedinUrl" href="https://www.linkedin.com/in/nitya-kansal" target="_blank" rel="me noopener">LinkedIn</a>
+        <a data-site-href="githubUrl" href="https://github.com/nitya-kansal" target="_blank" rel="me noopener">GitHub</a>
       </nav>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Shared facts first, then the data, then the renderer, then site scripts -->
+  <script src="assets/js/site-data.js"></script>
+  <script src="assets/js/service-data.js"></script>
+  <script src="assets/js/service.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV — Nitya Kansal</title>
   <meta name="description" content="Curriculum vitae and downloadable resume.">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -74,8 +74,8 @@
         <ul class="record-list">
           <li class="record">
             <div>
-              <div class="record__title">Founder &amp; Lead — Bookish Beginnings</div>
-              <div class="record__desc">Literacy initiative; 500+ books donated to underserved communities.</div>
+              <div class="record__title">Founder &amp; Lead — <span data-site="orgName">Bookish Beginning</span></div>
+              <div class="record__desc">Literacy initiative; <span data-site="booksDonated">4,000+</span> books donated to underserved communities.</div>
             </div>
             <div class="record__year">—</div>
           </li>
@@ -86,12 +86,8 @@
     <section class="section">
       <div class="container narrow">
         <div class="section-head"><h2>Honors &amp; awards</h2></div>
-        <ul class="record-list">
-          <li class="record"><div><div class="record__title">National Merit Finalist</div></div><div class="record__year">2024</div></li>
-          <li class="record"><div><div class="record__title">Purple Comet Math Competition — 1st Place (Team Lead)</div></div><div class="record__year">—</div></li>
-          <li class="record"><div><div class="record__title">Women Icon Award</div></div><div class="record__year">2025</div></li>
-          <li class="record"><div><div class="record__title">Voice of Youth Award</div></div><div class="record__year">—</div></li>
-        </ul>
+        <!-- Filled from the shared awards list in site-data.js -->
+        <ul class="record-list" id="awards-list"></ul>
         <p class="muted" style="margin-top:24px">Full details on the <a href="awards.html">Awards</a>, <a href="experience.html">Experience</a>, and <a href="impact.html">Service</a> pages.</p>
       </div>
     </section>
@@ -105,13 +101,15 @@
         <a href="cv.html">CV</a>
         <a href="timeline.html">Timeline</a>
         <a href="contact.html">Contact</a>
-        <a href="mailto:nitya.kansal2020@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/nitya-kansal" target="_blank" rel="me noopener">LinkedIn</a>
-        <a href="https://github.com/nitya-kansal" target="_blank" rel="me noopener">GitHub</a>
+        <a data-site-href="email" href="mailto:nitya.kansal2020@gmail.com">Email</a>
+        <a data-site-href="linkedinUrl" href="https://www.linkedin.com/in/nitya-kansal" target="_blank" rel="me noopener">LinkedIn</a>
+        <a data-site-href="githubUrl" href="https://github.com/nitya-kansal" target="_blank" rel="me noopener">GitHub</a>
       </nav>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="assets/js/site-data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

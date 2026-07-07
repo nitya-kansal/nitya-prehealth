@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nitya Kansal — Pre-Med Portfolio</title>
   <meta name="description" content="Sociology student at the University of Washington and aspiring physician focused on health equity, literacy access, and underserved communities.">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -50,7 +50,7 @@
             <div class="stat__label">Community engagement</div>
           </div>
           <div>
-            <div class="stat__num">500+</div>
+            <div class="stat__num" data-site="booksDonated">4,000+</div>
             <div class="stat__label">Books donated</div>
           </div>
           <div>
@@ -78,8 +78,8 @@
           </article>
           <article class="card card--accent">
             <span class="card__icon" aria-hidden="true">📚</span>
-            <h3>Bookish Beginnings</h3>
-            <p>Founded a literacy initiative delivering 500+ books to underserved communities.</p>
+            <h3 data-site="orgName">Bookish Beginning</h3>
+            <p>Founded a literacy initiative delivering <span data-site="booksDonated">4,000+</span> books to underserved communities.</p>
           </article>
           <article class="card card--accent">
             <span class="card__icon" aria-hidden="true">🩺</span>
@@ -109,13 +109,15 @@
         <a href="cv.html">CV</a>
         <a href="timeline.html">Timeline</a>
         <a href="contact.html">Contact</a>
-        <a href="mailto:nitya.kansal2020@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/nitya-kansal" target="_blank" rel="me noopener">LinkedIn</a>
-        <a href="https://github.com/nitya-kansal" target="_blank" rel="me noopener">GitHub</a>
+        <a data-site-href="email" href="mailto:nitya.kansal2020@gmail.com">Email</a>
+        <a data-site-href="linkedinUrl" href="https://www.linkedin.com/in/nitya-kansal" target="_blank" rel="me noopener">LinkedIn</a>
+        <a data-site-href="githubUrl" href="https://github.com/nitya-kansal" target="_blank" rel="me noopener">GitHub</a>
       </nav>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="assets/js/site-data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

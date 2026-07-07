@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Nitya Kansal</title>
   <meta name="description" content="About Nitya Kansal — Sociology student at the University of Washington focused on health equity and access to care.">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -40,10 +40,18 @@
     </div>
 
     <section class="section">
-      <div class="container narrow prose">
-        <p>I'm a Sociology student at the University of Washington, Seattle, exploring how social systems shape access to education and health.</p>
-        <p>My work centers on underserved communities, literacy access, and health equity — the throughline connecting my volunteering, leadership, and academic interests. I've seen how much of a person's health is decided long before they reach a clinic, and I want to practice medicine that takes those realities seriously.</p>
-        <p>I remain open to specialization and am focused, for now, on building a systems-level understanding of healthcare: why access is uneven, how communities are affected, and where a physician can meaningfully intervene.</p>
+      <div class="container">
+        <div class="about-layout">
+          <div class="prose">
+            <p>I'm a Sociology student at the University of Washington, Seattle, exploring how social systems shape access to education and health.</p>
+            <p>My work centers on underserved communities, literacy access, and health equity — the throughline connecting my volunteering, leadership, and academic interests. I've seen how much of a person's health is decided long before they reach a clinic, and I want to practice medicine that takes those realities seriously.</p>
+            <p>I remain open to specialization and am focused, for now, on building a systems-level understanding of healthcare: why access is uneven, how communities are affected, and where a physician can meaningfully intervene.</p>
+          </div>
+          <figure class="about-photo">
+            <img src="assets/images/portrait/Nitya.jpg" alt="Portrait of Nitya Kansal" loading="lazy"
+                 onerror="this.parentNode.innerHTML='&lt;div class=&quot;photo-placeholder&quot;&gt;Photo coming soon&lt;/div&gt;'">
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -70,20 +78,20 @@
         </div>
         <div class="timeline">
           <div class="timeline__item">
-            <div class="timeline__date">2023</div>
-            <div class="timeline__body">Recognized for a 500-book donation supporting literacy access.</div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__date">2024</div>
-            <div class="timeline__body">Named a National Merit Finalist.</div>
+            <div class="timeline__date">2026</div>
+            <div class="timeline__body">Began studies at the University of Washington, Seattle.</div>
           </div>
           <div class="timeline__item">
             <div class="timeline__date">2025</div>
             <div class="timeline__body">Earned leadership and advocacy awards for community work.</div>
           </div>
           <div class="timeline__item">
-            <div class="timeline__date">2026</div>
-            <div class="timeline__body">Began studies at the University of Washington, Seattle.</div>
+            <div class="timeline__date">2024</div>
+            <div class="timeline__body">Named a National Merit Finalist.</div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__date">2023</div>
+            <div class="timeline__body">Recognized for a <span data-site="booksDonated">4,000+</span> book donation supporting literacy access.</div>
           </div>
         </div>
         <p style="margin-top:24px"><a href="timeline.html">See the full timeline →</a></p>
@@ -99,13 +107,15 @@
         <a href="cv.html">CV</a>
         <a href="timeline.html">Timeline</a>
         <a href="contact.html">Contact</a>
-        <a href="mailto:nitya.kansal2020@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/nitya-kansal" target="_blank" rel="me noopener">LinkedIn</a>
-        <a href="https://github.com/nitya-kansal" target="_blank" rel="me noopener">GitHub</a>
+        <a data-site-href="email" href="mailto:nitya.kansal2020@gmail.com">Email</a>
+        <a data-site-href="linkedinUrl" href="https://www.linkedin.com/in/nitya-kansal" target="_blank" rel="me noopener">LinkedIn</a>
+        <a data-site-href="githubUrl" href="https://github.com/nitya-kansal" target="_blank" rel="me noopener">GitHub</a>
       </nav>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="assets/js/site-data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
