@@ -33,12 +33,12 @@ window.SITE = {
      year : use '' if you don't have one yet — it displays as "—".
      desc : optional one-line description.
      cats : OPTIONAL — extra Service-page category ids besides 'honors'
-            (see the ids in service-data.js, e.g. 'leadership', 'advocacy').  */
+            (see the ids in service-data.js, e.g. 'leadership', 'community'). */
   awards: [
     { title: 'National Merit Finalist', year: '2024', desc: 'National recognition for academic excellence.' },
     { title: 'Purple Comet Math Competition — 1st Place (Team Lead)', year: '', desc: 'Led team to first place, Massachusetts.', cats: ['leadership'] },
     { title: 'Women Icon Award', year: '2025', desc: 'Recognized for leadership and advocacy.', cats: ['leadership'] },
-    { title: 'Voice of Youth Award', year: '', desc: 'Honored for community advocacy and youth impact.', cats: ['advocacy'] }
+    { title: 'Voice of Youth Award', year: '', desc: 'Honored for community advocacy and youth impact.', cats: ['community'] }
     // ADD: copy a line above and edit it for each new award (mind the comma).
   ]
 };

@@ -25,6 +25,9 @@
      Save. Done. Empty categories simply show "nothing here yet" until you
      add an item to them — that's expected as the page grows.
 
+     'clinical' (Healthcare & Clinical) also covers physician shadowing and
+     medical community service — tag all three with 'clinical'.
+
    NOTE: Awards & honors are NOT listed here — they come from the shared
    "awards" list in site-data.js and appear automatically under the
    "Honors / Awards / Recognitions" tab. Edit awards there, once.
@@ -41,19 +44,16 @@ window.SERVICE = {
      if you change an id, update any items that use it.                     */
   categories: [
     { id: 'artistic',      name: 'Artistic Endeavors' },
-    { id: 'med-community', name: 'Medical Community Service' },
-    { id: 'community',     name: 'Community Service' },
+    { id: 'community',     name: 'Community Service & Advocacy' },
     { id: 'conferences',   name: 'Conferences Attended' },
     { id: 'clubs',         name: 'Clubs' },
     { id: 'hobbies',       name: 'Hobbies' },
     { id: 'honors',        name: 'Honors / Awards / Recognitions' },
     { id: 'leadership',    name: 'Leadership' },
-    { id: 'clinical',      name: 'Medical / Clinical Experience' },
-    { id: 'shadowing',     name: 'Physician Shadowing / Clinical Observation' },
+    { id: 'clinical',      name: 'Healthcare & Clinical' },
     { id: 'presentations', name: 'Presentations / Posters' },
     { id: 'publications',  name: 'Publications' },
     { id: 'research',      name: 'Research / Lab' },
-    { id: 'advocacy',      name: 'Social Justice / Advocacy' },
     { id: 'teaching',      name: 'Teaching / Tutoring' }
   ],
 
@@ -64,7 +64,7 @@ window.SERVICE = {
       date: '2023 – present',
       body: 'A literacy initiative I founded to expand book access for underserved communities — organizing donations, distribution, and outreach. ' +
             (SITE.booksDonated || '4,000+') + ' books donated to date.',
-      cats: ['leadership', 'community', 'advocacy'],
+      cats: ['leadership', 'community'],
       link: { href: SITE.instagramUrl || 'https://www.instagram.com/YOUR_HANDLE', label: 'Instagram ↗' }
     },
     {

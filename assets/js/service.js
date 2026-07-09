@@ -84,7 +84,7 @@
     var shown = items.filter(matches);
     if (!shown.length) {
       return '<div class="gallery-empty"><p><strong>Nothing here yet.</strong></p>' +
-        '<p>No entries match the selected categories. Add them in <code>service-data.js</code>.</p></div>';
+        '<p>No entries match the selected categories.</p></div>';
     }
     return '<div class="grid grid--3">' + shown.map(cardHtml).join('') + '</div>';
   }
